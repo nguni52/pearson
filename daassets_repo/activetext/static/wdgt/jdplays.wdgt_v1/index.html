@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JD Plays Widget</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript" src="jQuery-1.10.2.min.js"></script>
+
+		<style type="text/css">
+			
+			body {
+				background: transparent;
+				margin: 0px;
+				padding: 0px;
+			}
+			#bg{
+				position:fixed;
+				top: 0px;
+				left:0px;
+				z-index: -1;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				outline-style:none;
+			}
+
+			#OKBtn {
+				background-image: url('images/button_okUp.png');
+				background-repeat: no-repeat;
+				width: 184px;
+				height: 78px;
+				margin-left: 220px;
+				margin-top: 200px;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				outline-style:none;
+			}
+
+			#OKBtn:hover {
+				background-image: url('images/button_okOver.png');
+				background-repeat: no-repeat;
+				width: 184px;
+				height: 78px;
+				cursor: pointer;
+			}
+
+			#OKBtn:active {
+				background-image: url('images/button_okDown.png');
+				background-repeat: no-repeat;
+				width: 184px;
+				height: 78px;
+			}
+
+			#audioBtn{
+				background-image: url('images/audio_up.png');
+				background-repeat: no-repeat;
+				width: 90px;
+				height: 91px;
+				margin-left: 22px;
+				margin-top: -235px;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				outline-style:none;
+			}
+
+			#audioBtn:hover{
+				background-image: url('images/audio_over.png');
+				background-repeat: no-repeat;
+				width: 90px;
+				height: 91px;
+				cursor: pointer;
+			}
+
+			#audioBtn:active{
+				background-image: url('images/audio_down.png');
+				background-repeat: no-repeat;
+				width: 90px;
+				height: 91px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<audio id="audio" preload>
+ 			<source src="audio.mp3" type="audio/mpeg" preload="auto">
+  			<source src="audio.ogg" type="audio/ogg" preload="auto">
+		</audio>
+
+		<div id="OKBtn"></div>
+		<div id="audioBtn"></div>
+		<div id="bg">
+			<img src="images/widget_background.png" alt="Who do you want to be? Click on a character. To read the play yourself, click Next." />
+		</div>
+		<script type="text/javascript">
+			$("#OKBtn").click(function() {
+				//console.log("OK Button function to go here");
+
+               parent.window.ActiveText.CloseDialog($(this));
+
+            });
+			$("#audioBtn").click(function() {
+				$('#audio').trigger('play');
+			});
+		</script>
+
+	</body>
+</html>

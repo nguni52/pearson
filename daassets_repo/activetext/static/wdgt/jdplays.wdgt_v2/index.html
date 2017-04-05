@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JD Plays Widget</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript" src="jQuery-1.10.2.min.js"></script>
+
+		<style type="text/css">
+			
+			body {
+				background: transparent;
+				margin: 0px;
+				padding: 0px;
+			}
+			#bg{
+				position:fixed;
+				top: 0px;
+				left:0px;
+				
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				outline-style:none;
+			}
+
+
+		
+			
+			#audioButton{
+				position:relative;
+				width:90px;
+				height:91px;
+				overflow:hidden;
+				margin-left: 130px;
+				margin-top: -225px;
+				top:0px;
+				left:-90px;
+			}
+			
+			#audioButton img:hover{
+				left:-90px;
+			}
+			#audioButton img:active{
+				left:-180px;
+			}
+			
+			#audioButton img{
+				position:absolute;
+				width:270px;
+				height:91px;
+			}
+			
+			#okButton{
+				position:relative;
+				width:184px;
+				height:78px;
+				overflow:hidden;
+				margin-left: 186.5px;
+				margin-top: 180px;
+				top:0px;
+				
+			}
+			
+			#okButton img:hover{
+				left:-184px;
+			}
+			#okButton img:active{
+				left:-368px;
+			}
+			
+			#okButton img{
+				position:absolute;
+				width:552px;
+				height:78px;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<audio id="audio" preload>
+ 			<source src="audio.mp3" type="audio/mpeg" preload="auto">
+  			<source src="audio.ogg" type="audio/ogg" preload="auto">
+		</audio>
+		
+		<div id="bg">
+			<img src="images/widget_background.png" alt="Who do you want to be? Click on a character. To read the play yourself, click Next."/>
+		</div>
+		<div id="okButton"><a href="javascript:okPressed();" tabindex="2"><img src='images/ok.png' alt='Ok button' title='Ok button'></a></div>
+		<div id="audioButton"><a href="javascript:playPressed();" tabindex="1"><img src='images/audio.png' alt='Audio button' title='Audio button'></a></div>
+		
+		<script type="text/javascript">
+			function okPressed() {
+				console.log("OK Button function to go here");
+			}
+			
+			function playPressed() {
+				$('#audio').trigger('play');
+			}
+		</script>
+
+	</body>
+</html>

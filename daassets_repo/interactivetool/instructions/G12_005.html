@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>G12_005 GIS data integration and identifying layers</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h3>GIS data integration and identifying layers</h3>
+<p>To build up a GIS project, one of the first steps is to identify and acquire the data and map <strong>layers</strong> that you need. Once you have the data and map layers, the next step is to <strong>integrate</strong> them, which means &#8216;put them together&#8217;. </p>
+<p> A very important consideration for integrating spatial datasets and map layers is that they <strong>overlay</strong> correctly. All the layers you need must firstly overlay or line up accurately on top of each other and they must be at the same projection. </p>
+<figure> <img src="../images/G12_005/G12_005_R481_GISIntdgrm_gen.png" class="img-responsive" width="640" height="" alt=""/>
+  <figcaption> GIS integration diagram </figcaption>
+</figure>
+<p> For this to happen, these conditions need to be met: </p>
+<ul>
+  <li>The co-ordinate reference system (CRS) of the geometry must be described properly.</li>
+  <li> The GIS software must be able to understand the CRS that
+    is used and project or transform the data ‘on the fly’ into a 
+    common CRS or else convert each data set permanently into 
+    a common CRS. </li>
+</ul>
+<p> In South Africa, the CRS would normally be the South African Co-ordinate Reference System, which is based on the Transverse Mercator projection (also know as Gauss Conform or Kruger) and the Hartebeesthoek 1994 <strong>datum</strong>, using metres as the co-ordinate units. </p>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

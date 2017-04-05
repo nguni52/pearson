@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>M11_003 Calculating magnetic declination and magnetic bearing</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<h3>Calculating magnetic declination and magnetic bearing</h3>
+
+<p>The magnetic north pole is situated west of true north and it is currently shifting westwards. This means that <strong>magnetic declination</strong> is increasing.</p>
+
+<p>Magnetic declination information is displayed at the bottom of all South African topographic map sheets. We require this information in order to calculate present-day magnetic declination and to determine <strong>magnetic bearing.</strong></p>
+
+
+<figure>
+	<img src="../images/M11_003/M11_003_R134_MDKrsfntn_gen.png" class="img-responsive" width="640" height="" alt=""/>
+</figure>
+
+<p>Follow these simple steps in order to determine current magnetic declination:</p>
+
+<p class="step"><strong>Step 1:</strong> Determine the difference in years between the time of measurement and the current year.</p>
+<p class="step"><strong>Step 2:</strong> Calculate the total annual change.</p>
+<p class="step"><strong>Step 3:</strong> If migration is westwards, add the total change to the original declination. If migration is eastwards, subtract the total change from the original declination.</p>
+
+<section class="eg">
+<h4>Example</h4>
+<p>Determine the current magnetic declination for Kruisfontein 2015.</p>
+
+<p class="step">Step 1: 2015 – 2011 = 4 years</p>
+<p class="step">Step 2: 6&#39; &#215; 4 = 24&#39;W</p>
+<p class="step">Step 3: 26&#176;58&#39;W + 24&#39;W = 26&#176;82&#39;W = 27&#176;22&#39;W</p>
+</section>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

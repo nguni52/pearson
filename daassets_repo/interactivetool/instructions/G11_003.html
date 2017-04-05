@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>G11_003 Working with spectral resolution</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<h3>Working with spectral resolution</h3>
+
+<p>Earth observation data captured by a spectral sensor consists of measurements at one or more <strong>bands</strong>, or frequency ranges. The size, spacing and number of these bands determine the <strong>spectral resolution</strong> of the sensor.</p>
+
+<ul>
+<li>A normal camera captures three bands of light frequencies in the visible spectrum. It has a relatively low spectral resolution since it samples a very small range of the available spectrum, and each band is quite wide.</li>
+<li>At the other extreme, a <strong>hyperspectral</strong> sensor captures up to 256&#160;bands across a much wider section of the spectrum and each band is much smaller. It thus has a much higher spectral resolution.</li>
+<li>A remote sensing specialist will use the appropriate spectral resolution for their application. In other words, they will choose a sensor that measures the spectra they are interested in, in bands narrow enough to discriminate the phenomenon of interest.
+	
+	<figure>
+		<img src="../images/G11_003/G11_003_R294_SatMultSns_sat.png" class="img-responsive" width="640" alt="" />
+	</figure>
+
+</li>
+<li>A GIS can generate reflectance or <strong>spectral signatures</strong> from satellite imagery. Spectral signatures are the specific combination of emitted, reflected or absorbed electromagnetic radiation at varying wavelengths that can uniquely identify an object. Water, soil and vegetation give a different signature as shown below. They can be seen as fingerprints and are used to identify mineral type and the health of plants.
+
+	<figure>
+		<img src="../images/G11_003/G11_003_R293_SpecSgns_gis.png" class="img-responsive" width="640" alt="" />
+	</figure>
+</li>
+</ul>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

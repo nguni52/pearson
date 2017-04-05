@@ -1,0 +1,51 @@
+body {
+	background: transparent url('../images/widget_background.png') no-repeat 0 0;
+	margin: 0;
+	padding: 0;
+}
+.audio-button a {
+	border: 0;
+	width: 52px;
+	height: 52px;
+	top: 10px;
+	left: 110px;
+	position: absolute;
+	display: block;
+}
+.audio-button img {
+	border: 0;
+}
+
+.ok-button {
+	position: absolute;
+	width: 97px;
+	height: 56px;
+	overflow: hidden;
+	margin-left: 320px;
+	top: 130px;
+}
+.ok-button a {
+	border: 0;
+}
+.ok-button img:hover,
+.audio-button img:hover {
+	opacity: .7;
+}
+
+.ok-button img {
+	position: absolute;
+	width:74px;
+	height:49px;
+	border: 0;
+}
+
+.text {
+	position: absolute;
+	z-index: 200;
+	font-family: 'heinemann-special';
+	word-spacing: 0;
+	letter-spacing: 0;
+	top: 10px;
+	left: 170px;
+	color: #111;
+}

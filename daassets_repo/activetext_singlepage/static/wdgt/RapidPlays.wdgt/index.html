@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rapid Plays Widget</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  		<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
+  		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	</head>
+	<body>
+
+		<audio id="audio" preload>
+ 			<source src="audio/audio.mp3" type="audio/mpeg" preload="auto">
+  			<source src="audio/audio.ogg" type="audio/ogg" preload="auto">
+		</audio>
+
+		<div class="audio-button">
+			<a href="javascript:void(0);" tabindex="1">
+				<img src="images/AudioUp.png" alt="Play this message" title="Play this message">
+			</a>
+		</div>
+
+		<div class="text">
+			<p><strong>Who do you want to be?</strong></p>
+			<p>Click on a character or turn<br />the page to start the play.</p>
+		</div>
+
+		<div class="ok-button">
+			<a href="javascript:void(0);" tabindex="2">
+				<img src="images/ok.png" alt="Ok button" title="Ok">
+			</a>
+		</div>
+		
+		<script type="text/javascript" src="jQuery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+
+				$('body').on('click', '.audio-button', function(){
+					$('#audio').trigger('play');
+				});
+
+				$('body').on('click', '.ok-button', function(){
+					parent.window.ActiveText.CloseDialog($(this));
+				});
+
+			});
+
+		</script>
+
+	</body>
+</html>

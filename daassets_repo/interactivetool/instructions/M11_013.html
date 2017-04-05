@@ -1,0 +1,95 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1998/Math/MathML">
+<head>
+<meta charset="UTF-8">
+<title>M11_013 Calculating gradient</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<h3>Calculating gradient</h3>
+
+<p>The gradient of a slope is how steep it is. Most slopes undulate and therefore we look at the <strong>average gradient</strong> of the slope from top to bottom, rather than the small sections in between when we talk about the gradient of a slope. Gradient can be described as being gentle, moderate or steep. Gradient is expressed as a ratio of height&#8201;:&#8201;distance (rise&#8201;:&#8201;run). It can be calculated if we know the vertical distance between two points as well as the horizontal distance between the same two points. The formula we use is:</p>
+<p class="ind_text">Vertical Distance (VD)&#8201;:&#8201;Horizontal Distance (HD)</p>
+
+
+<figure>
+	<img src="../images/M11_013/M11_013_R218_SlopeImg_gen.png" class="img-responsive" width="640" height="" alt=""/>
+</figure>
+
+<section class="eg">
+<p>The average gradient of the slope in the illustration can be calculated as follows: </p>
+
+<p class="ind_text">VD = 145&#160;m – 125&#160;m = 20&#160;m </p>
+<p class="ind_text">HD = 5&#160;km = 5&#160;000&#160;m <br/><span class="blue">(it is important that the same units are used on both sides of the equation)</span></p>
+
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mn>G</mn>
+			<mo>=</mo>
+			<mtext>VD&#8201;:&#8201;HD</mtext>
+		</mrow>
+	</math>
+</p>
+
+<p class="ind_text"> 
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mn>G</mn>
+			</mphantom>
+			<mo>=</mo>
+			<mtext>20&#160;m&#8201;:&#8201;5&#160;000&#160;m</mtext>
+		</mrow>
+	</math>
+</p>
+
+<p class="ind_text"> 
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mn>G</mn>
+			</mphantom>
+			<mo>=</mo>
+			<mfrac>
+				<mtext>20</mtext>
+				<mtext>20</mtext>
+			</mfrac>
+			<mtext>:</mtext>
+			<mfrac>
+				<mtext>5&#160;000</mtext>
+				<mtext>20</mtext>
+			</mfrac>
+		</mrow>
+	</math>
+ </p>
+
+<p class="ind_text"> 
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mn>G</mn>
+			</mphantom>
+			<mo>=</mo>
+			<mtext>&#160;1&#8201;:&#8201;250</mtext>
+		</mrow>
+	</math>
+</p>
+
+<p>Despite what we would assume from just looking at the image, this is actually a very gentle gradient: for every 1&#160;m we go up (rise), we travel 250&#160;m across (run).</p>
+
+</section>
+
+<p>In order to calculate average gradient on topographic maps, we simply use the contour line values to ascertain the rise between the highest and lowest point (VD). But for the run, we need to measure the horizontal distance between the top and bottom points of the slope and convert this to metres using the scale of the map. Remember the horizontal scale on topographic maps is always 1&#8201;:&#8201;50&#160;000 (1&#160;cm represents 500&#160; m).</p>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</body>
+</html>

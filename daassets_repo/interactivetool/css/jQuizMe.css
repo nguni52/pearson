@@ -1,0 +1,514 @@
+/*
+* jQuizMe - jQuery quiz plugin
+*
+* @version 2.2.1
+* @date 10/09/2012
+*/	
+.quiz-el {
+	background: #BEC2D7;
+	font-size: 1.1em;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	
+	padding: 0.2em;
+	/*width: 20.3em;
+	position: relative;
+	
+		position: relative;
+	width: 17em;*/	
+}
+.quiz-el div {
+	padding: 0.2em;
+}
+.quiz-el input {
+	font-size: 0.8em;
+}
+/* .q-innerArea = .q-header, .q-help, .q-prob, .q-intro, .q-gameOver */
+.q-innerArea {
+	background: #BEC2D7;
+	position: relative;
+	clear: both;
+	color: black;
+}
+.q-header, .q-help, .q-review-menu {
+/*border-bottom: thin black solid;*/
+}
+.q-intro {
+	padding: 0.2em;
+}
+.q-title {
+	/* width: 80%;
+	display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    width: 30%;*/
+	
+	display: inline-block;
+	left: 4px;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	top: 4px;
+	width: 33%;
+}
+/*This is a hack, because IE fails on float:right.
+.q-counter {
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	margin: 1%;
+	padding: 0%;
+}
+.q-counter {
+	float: right;
+}
+*/
+
+.counter-container {
+	display: block;
+	height: 30px !important;
+	background: none repeat scroll 0 0 #eee;
+	color: #858bac;
+	font-size: 1.2em;
+}
+.q-counter {
+	display: block;
+	float: right;
+	position: relative;
+	top: -3px;
+}
+.q-help {
+ clear clear: both;
+	display: inline-block !important;
+	float: right;
+	padding: 0 !important;
+	position: relative;
+	top: -3px;
+}
+/*.q-probArea = .q-ques, .q-ansSel, .q-result */
+.q-probArea {
+	background: #eee;
+	/* border: thin black solid;*/
+	font-size: 1.2em;
+	position: relative;
+	color: #858bac;
+	padding-bottom: 10px !important;
+}
+.q-help-menu {
+/* width: 97%;*/
+}
+.q-help-info {
+	clear: both;
+}
+.q-quit-confirm, .q-quit-area, .q-review-arrows {
+	display: inline;
+	width: auto;
+}
+/*
+.q-quit-area {
+	float: right;
+}
+
+*/
+.q-review-arrows {
+	position: relative;	/*IE hack.*/
+	width: 2.3em;
+}
+.q-center {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.q-gameOver .q-statTotal {
+	color: #858bac;
+}
+.q-quesInput {
+	width: 95%;
+}
+.q-ol {
+	list-style-type: upper-alpha;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+}
+.q-ol-li {
+	margin: 0.4em auto 0.4em auto;
+}
+.q-ol-hover {
+/* background: #777777; */
+}
+.q-ol-active {
+/* background: black;
+	color: #ccffaa; */
+}
+/*IE displays the wrong width for <select> tags.*/
+.q-select {
+	width : 80%;
+}
+.q-select {
+	font-size: 0.8em;
+	width: 100%;
+}
+.q-timer-area {
+	display: block;
+	text-align: center;
+	width: auto;
+}
+.q-review-menu {
+	text-align: center;
+	width: auto;
+}
+.q-reviewBar-btns {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+}
+.q-rightArrow {
+	float: right;
+}
+.q-leftArrow {
+	float: left;
+}
+.q-timer-area {
+	line-height: 0;
+	height: 0;
+}
+/*Quiz custom buttons css*/
+input[type=button]:disabled {
+	opacity: 0.65;
+	/*cursor: not-allowed;*/
+}
+input[disabled]:hover {
+	opacity: 0.65;
+	/*cursor: not-allowed;*/
+	background: #858BAC !important;
+	border: 1px solid #858BAC !important;
+	color: #ffffff !important;
+}
+input[type=button] {
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	background: #858BAC;
+	/*padding: 10px 20px 10px 20px;
+	padding: 10px;*/
+	padding: 5px 15px;
+	text-decoration: none;
+	border: 1px solid #858BAC;
+	cursor: pointer;
+}
+input[type=button]:hover {
+	background: #ffffff;
+	border: 1px solid #858BAC;
+	color: #858BAC;
+}
+.q-innerArea {
+	color: white !important;
+}
+select {
+	color: #858BAC;
+}
+option {
+	color: #858BAC;
+}
+input[type=text] {
+	color: #858BAC;
+}
+.q-begin-btn {
+	margin-bottom: 10px;
+	/*margin-left: 65px;*/
+}
+.q-next-btn {
+	/*float: right;*/
+}
+.q-details-btn {
+	float: left;
+	width: 40%;
+}
+.q-review-btn {
+	float: right;
+	width: 40%;
+}
+.q-header {
+	background-color: #858bac;
+}
+.q-intro-info {
+	/* text-align: center;*/
+	padding-left: 5px !important;
+}
+.wPaint-menu {
+	width: 940px !important;
+}
+/*Quiz custom buttons css*/
+
+/*Quiz help button css*/
+
+input.q-help-btn:disabled {
+    background: none repeat scroll 0 0 #fff !important;
+    color: #858bac !important;
+    /*cursor: not-allowed;*/
+}
+
+
+input.q-help-btn {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #858bac;
+	border-radius: 30px;
+	color: #858bac;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+	width: 30px;
+	/* margin-left: 3px;*/
+	position: absolute;
+	left: -32px;
+}
+input.q-help-btn:hover {
+	background: none repeat scroll 0 0 #858bac;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+input.q-quit-btn:disabled {
+    background: none repeat scroll 0 0 #fff !important;
+    color: #858bac !important;
+    opacity: 0.65;
+	/*cursor:not-allowed;*/
+}
+
+input.q-quit-btn {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #858bac;
+	border-radius: 30px;
+	color: #858bac;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+	width: 30px;
+}
+input.q-quit-btn:hover {
+	background: none repeat scroll 0 0 #858bac;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+input.q-quitYes-btn, input.q-quit-confirm {
+	padding: 5px 10px;
+}
+/*Quiz help button css*/
+
+/*Quiz custom css*/
+
+.q-ansSel {
+	width: 100%;
+	padding-bottom: 10px !important;
+	padding-top: 10px !important;
+}
+span.q-ol-li-ansSel {
+	padding-left: 10px;
+}
+/* The CSS */
+
+select.q-review-index-all.q-review-index {
+	padding: 3px;/*  padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+	*/
+}
+select.q-review-index-missed.q-review-index {
+	padding: 3px;/*  padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+	*/
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+select.q-review-index-all.q-review-index {
+	padding-right: 18px
+}
+}
+/* Select box styling */
+
+.styled-select {
+	background: url(../images/15xvbd5.png) no-repeat 86% 0;
+	display: inline-block;
+	height: 33px;
+	overflow: hidden;
+	position: relative;
+	top: 13px;
+	width: 80px;
+}
+.styled-select select {
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	/*height: 29px;
+   padding: 5px;  If you add too much padding here, the options won't show in IE */
+	width: 100px;
+}
+.styled-select select option {
+	color: #fff;
+}
+.styled-select-missed {
+	background: url(../images/15xvbd5.png) no-repeat 86% 0;
+	height: 33px;
+	overflow: hidden;
+	position: relative;
+	top: 13px;
+	width: 80px;
+}
+.styled-select-missed select {
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	/*height: 29px;
+   padding: 5px;  If you add too much padding here, the options won't show in IE */
+	width: 100px;
+}
+.styled-select-missed select option {
+	color: #fff;
+}
+.semi-square {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/* -------------------- Colors: Background */
+.slate {
+	background-color: #ddd;
+}
+.green {
+	background-color: #779126;
+}
+.blue {
+	background-color: #858bac;
+}
+.yellow {
+	background-color: #eec111;
+}
+.black {
+	background-color: #000;
+}
+/* -------------------- Colors: Text */
+.slate select {
+	color: #000;
+}
+.green select {
+	color: #fff;
+}
+.blue select {
+	color: #fff;
+}
+.yellow select {
+	color: #000;
+}
+.black select {
+	color: #fff;
+}
+/* Select bos */
+
+/* Input Checkbox */
+
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	z-index:130px;
+	/*left: -1000px;*/
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+   background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    height: 32px;
+    left: 83px;
+    line-height: 20px;
+    /*padding-left: 25px;*/
+    position: relative;
+    top: -29px;
+    vertical-align: middle;
+    width: 32px;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -32px;
+}
+label.css-label {
+	background-image: url(../images/csscheckbox_839316376a1d38d803b3a68ad74598a2.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/* Input Checkbox */
+
+/* Input Radio */
+
+
+
+/* Input Radio */
+
+input.q-showOnlyMissed-btn {
+	height: 30px;
+	position: relative;
+	top: 8px;
+	width: 30px;
+}
+.q-reviewBar {
+	top: 8px;
+}
+.q-review-nav {
+	top: -11px;
+	position: relative;
+	left: -20px;
+}
+div.q-result.q-probArea {
+	font-weight: 900;
+}
+.q-reviewBar-btns:hover:not(.lighter-blue){
+	background: #858BAC;
+	color: #FFF;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1998/Math/MathML">
+<head>
+<meta charset="UTF-8">
+<title>M11_011 Understanding vertical exaggeration</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<h3>Understanding vertical exaggeration</h3>
+
+<p>When we construct cross-sections on maps we usually exaggerate (enlarge) the vertical scale in order to see the variations in relief (hills and valleys and slope details) more clearly. The number of times we enlarge the vertical scale is called the <strong>vertical exaggeration</strong>. The horizontal scale of the cross-section remains the same as the map scale, i.e. 1&#8201;:&#8201;50&#160;000 on topographic maps and 1&#8201;:&#8201;10&#160;000 on orthophoto maps.</p>
+
+<p>We use the following formula to calculate vertical exaggeration:</p>
+
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mtext>VE</mtext>
+		<mo>=</mo>
+		<mfrac>
+			<mtext>Vertical scale (VS)</mtext>
+			<mtext>Horizontal scale (HS)</mtext>
+		</mfrac>
+	</math>
+</p>
+
+<section class="eg">
+<p>In order to calculate the VE of this cross-section, we need to first determine the VS and the HS that was used.</p>
+
+<figure>
+	<img src="../images/M11_011/M11_011_R211_SktchCSImg_gen.png" width="615" height="" alt=""/>
+</figure>
+
+<p>The VS is 1&#160;cm&#8201;:&#8201;20&#160;m and the HS is 1&#160;cm&#8201;:&#8201;500&#160;m.</p>
+<p>We insert these values into the calculation and find that the VE is 25&#160;times.</p>
+
+<p class="ind_text">VS: 1&#160;cm&#8201;:&#8201;20&#160;m = 1&#160;cm&#8201;:&#8201;2&#160;000&#160;cm</p>
+
+<p class="ind_text">HS: 1&#160;cm&#8201;:&#8201;500&#160;m = 1&#160;cm&#8201;:&#8201;50&#160;000&#160;cm</p>
+
+<p>Therefore:</p>
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mtext>VE</mtext>
+			<mo>=</mo>
+			<mfrac>
+				<mtext>Vertical scale (VS)</mtext>
+				<mtext>Horizontal scale (HS)</mtext>
+			</mfrac>
+		</mrow>
+	</math>
+</p>
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mtext>VE</mtext>
+			</mphantom>
+			<mo>=</mo>
+			<mfrac>
+				<mtext>1&#8201;:&#8201;2&#160;000</mtext>
+				<mtext>1&#8201;:&#8201;50&#160;000</mtext>
+			</mfrac>
+		</mrow>
+	</math>
+</p>
+	
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mtext>VE</mtext>
+			</mphantom>
+			<mo>=</mo>
+			<mfrac>
+				<mtext>1</mtext>
+				<mtext>2&#160;000</mtext>
+			</mfrac>
+			<mo>&#215;</mo>
+			<mfrac>
+				<mtext>50&#160;000</mtext>
+				<mtext>1</mtext>
+			</mfrac>
+		</mrow>
+	</math>
+</p>
+	
+<p class="ind_text">
+	<math display="inline" indentalign="left">
+		<mrow>
+			<mphantom>
+				<mtext>VE</mtext>
+			</mphantom>
+			<mo>=</mo>
+			<mtext>&#160;25&#160;times</mtext>
+		</mrow>
+	</math>
+</p>
+
+
+</section>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</body>
+</html>

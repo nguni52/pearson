@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>G12_001 Uses of remote sensing and satellites</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h3>	Understanding data layers in GIS	</h3>
+<p>	GIS maps consist of different layers of data.	</p>
+<ul>
+<li>	A <strong>point</strong> is a map feature that has no length or area, such as a city on a world map or a building on a city map.	</li>
+<li>	A <strong>line</strong>, also known as an edge, is a map feature that has length but not area, such as a river on a world map or a contour on a topographic map.	</li>
+<li>	<strong>Nodes</strong> are the beginning or ending points of an edge or one of the three corners of a triangle.	</li>
+<li>	<strong>Areas</strong> or <strong>polygons</strong> are features on a map that have a closed, two-dimensional shape.	</li>
+<li>	Points, lines and polygon data are <strong>vector</strong> data.	</li>
+<li>	Satellites generate <strong>raster data</strong>, consisting of pixels.	</li>
+<li>	<strong>Pixels</strong> are the smallest unit in which raster data is stored and make up a regular grid of cells that are referenced in rows and columns.	</li>
+</ul>
+<p>	When using a GIS to map data it is best to have points overlaid on top of lines overlaid on top of polygons overlaid on top of raster data, i.e. stack the layers from top to bottom as point; line; polygon and raster. Data will be hidden if it is not placed in this order. For example, if you place an urban area polygon on top of a spot height point, you will not see the spot height.	</p>
+<video width="640" controls>
+  <source src="../video/understanding_data_layers_gis/Understanding_data_layers_in_GIS.mp4" type="video/mp4">
+  <source src="../video/understanding_data_layers_gis/Understanding_data_layers_in_GIS.ogg" type="video/ogg">
+  <source src="../video/understanding_data_layers_gis/Understanding_data_layers_in_GIS.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<figure>
+<img src="../images/G10_004/G10_004_R514_DgwdLyrs_gen.png" class="img-responsive" width="640" height="" alt=""/>
+<figcaption>A GIS dagwood sandwich!</figcaption>
+</figure>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

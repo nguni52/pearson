@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>G12_001 Uses of remote sensing and satellites</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h3>	Calculating gradient on topographic maps	</h3>
+<p>	Gradient tells us about the steepness of a slope. Most slopes are not uniform, so we look at the <strong>average gradient</strong> of the slope from top to bottom, rather than the small sections in between.	</p>
+<figure>
+<img src="../images/M12_013/M12_013_R342_HngGldr_pho.png" class="img-responsive" width="640" height="" alt=""/>
+<figcaption>Hang glider in front of very steep slope (1:1 rise to run ration)</figcaption>
+
+</figure>
+<p>	Gradient is expressed as a ratio of height:distance (rise:run). In the photograph above, the rise to run ratio is 1&#8201;:&#8201;1. This is a very steep slope – for every metre you go up, you only travel 1&#160;metre across.</p>
+<figure>
+<img src="../images/M12_013/M12_013_R343_RckBch_pho.png"  class="img-responsive" width="640" height="" alt=""/>
+<figcaption>Rocky beach (0:1 rise to run ration)</figcaption>
+</figure>
+<p>In the photograph above, however, there is no incline along the rocky platform so the rise to run ratio is 0:1. Depending on the gradient, slopes can be described as being gentle, moderate, steep or very steep.	</p>
+
+<figure>
+<img src="../images/M12_013/M12_013_R344_SlpClass_top.png"  class="img-responsive"  width="615" height="" alt=""/>
+<figcaption>Slope classification</figcaption>
+</figure>
+<p>	On topographic maps it is best to calculate rather than estimate gradient. We use the following formula:	</p>
+<p class="ind_text">	Vertical distance (VD):Horizontal distance (HD)	</p>
+<p>	The VD is obtained by calculating the difference in height between two points. On a topographic map, this value will always be in metres. (Do not round off altitude values of spot heights!)	</p>
+<p>	The HD between the two points has to be measured on the map and then converted to metres before it can be used in the formula. Remember the scale on topographic maps is 1&#8201;:&#8201;50&#160;000; this means 1&#160;cm on the map is equal to 500&#160;m on the ground.	</p>
+<p>	Example:	</p>
+<ul>
+<li>	The vertical distance between two points on a topographic map is 205,7&#160;m.	</li>
+<li>	The straight line distance between these two points is 5,6&#160;cm.	</li>
+</ul>
+
+
+
+<p class="ind_text">	Gradient = VD:HD <br>
+
+VD = 205,7&#160;m <br>       
+
+HD = 5,6&#160;cm = 5,6&#160;&#215;&#160;0,5 = 2,8&#160;km = 2&#160;800&#160m <br>
+
+205,7&#8201;:&#8201;2&#160;800 <br>
+
+<math class="pull-left" xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+
+
+<mfrac>
+    <mn>205,7</mn>
+    <mi>205,7</mi>
+ </mfrac>
+ <mo>:</mo>
+ <mfrac>
+    <mn>2 800</mn>
+    <mi>205,7</mi>
+ </mfrac>
+</math><br>
+
+<br>
+1&#8201;:&#8201;13,61    (Round off to the second decimal place)<br>
+
+This is a moderate to gentle slope.	</p>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

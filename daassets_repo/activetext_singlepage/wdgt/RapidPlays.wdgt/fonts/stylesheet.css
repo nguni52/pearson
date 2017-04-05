@@ -1,0 +1,18 @@
+@font-face{
+  font-family:'heinemann-special';
+  src:url('be8783ef363b706a9d4e4a04dba99df31523ac38.eot');
+  src:url('be8783ef363b706a9d4e4a04dba99df31523ac38.eot?#iefix') format('embedded-opentype'),
+      url('74727931f38ae3d96fb103fa3e9f2ab609c07e0e.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family:'heinemann-special';
+  src:url('d503710c5cb5a0c4ba67fcd57b8113bd9e6436cf.eot');
+  src:url('d503710c5cb5a0c4ba67fcd57b8113bd9e6436cf.eot?#iefix') format('embedded-opentype'),
+      url('f353d99d6d18eef861d08c4ccf61476a7e9996e3.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+

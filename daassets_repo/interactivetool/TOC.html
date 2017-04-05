@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<title>Interactive activity asset</title>
+<!-- smooth Zoom -->
+<style>
+span.description {
+	position: absolute; /* absolute position (so we can position it where we want)*/
+	left: 0px;
+	width: 100%;
+	/*height:100%;
+	 styling bellow */  
+	background-color: #858bac;
+	font-family: 'arial';
+	font-size: 12px;
+	color: white;
+	/*opacity: 0.6;  transparency */
+	/* filter: alpha(opacity=60); IE transparency */
+	bottom:0;
+	text-align:center;
+}
+
+span.Mapdescription {
+	position: absolute; /* absolute position (so we can position it where we want)*/
+	left: 0px;
+	width: 100%;
+	/*height:100%;
+	 styling bellow */  
+	background-color: #858bac;
+	font-family: 'arial';
+	font-size: 12px;
+	color: white;
+	/*opacity: 0.6;  transparency */
+	/* filter: alpha(opacity=60); IE transparency */
+	top:0;
+	text-align:center;
+}
+
+
+span.description_overlay {
+	position: absolute; /* absolute position (so we can position it where we want)*/
+	bottom: 42px; /* position will be on bottom */
+	left: 0px;
+	width: 100%;
+	/*height:100%;
+	 styling bellow */  
+	font-family: 'arial';
+	font-size: 12px;
+	color: white;
+	font-weight: bold;
+	/*opacity: 0.6;  transparency */
+	/* filter: alpha(opacity=60); IE transparency */
+	text-align:center;
+}
+
+
+
+
+#overlay {
+	position: absolute; /* absolute position (so we can position it where we want)*/
+	bottombottom: 0px; /* position will be on bottom */
+	left: 0px;
+	width: 100%;
+	height:100%;
+	/* styling bellow */  
+	background:rgba(0,0,0,.75);
+	font-family: 'arial';
+	font-size: 12px;
+	color: white;
+	/*opacity: 0.6;  transparency */
+	/* filter: alpha(opacity=60); IE transparency */
+	bottom:0;
+	opacity:0;
+	text-align:center;
+}
+
+#overlay:hover {
+	opacity:0.6;
+}
+
+
+.smooth_zoom_preloader {
+	background-image: url(zoom_assets/preloader.gif);
+}
+.smooth_zoom_icons {
+	background-image: url(zoom_assets/icons.png);
+}
+#zoom_container {
+	overflow: hidden;
+}
+.zoom_thumbnails {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+.zoom_thumbnails li {
+	display: inline-block;
+}
+.zoom_thumbnails li img {
+	/* margin: 5px;*/
+	border: 0px;
+}
+#zoom_container {
+	float: left; /* important for inline positioning */
+	width: 605px; /* important (this width = width of list item(including margin) * items shown */
+	overflow: hidden;  /* important (hide the items outside the div) *//* non-important styling bellow 
+background: #F0F0F0;*/
+}
+.zoom_thumbnails {
+	position: relative;
+	left: 24px; /* important (this should be negative number of list items width(including margin) */
+	list-style-type: none; /* removing the default styling for unordered list items */
+	margin: 0px;
+	padding: 0px;
+	width: 9999px; /* important */
+	/* non-important styling bellow */
+	padding-bottom: 10px !important;
+}
+.zoom_thumbnails li {
+	float: left; /* important for inline positioning of the list items */
+	width: 140px;  /* fixed width, important */
+	/* just styling bellow*/
+	padding: 0px;
+	height: 105px;
+	/*background: #000000;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: -5px;
+	margin-right: 10px;
+	position: relative;
+	border: 1px solid #858BAC;
+	/*margin-left:-5px;*/
+}
+
+
+.zoom_thumbnails li img {
+.margin-bottom:-4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
+	/* styling */
+	cursor: pointer;
+	cursor: hand;
+	border: 0px;
+}
+
+#left_scroll, #right_scroll {
+	float: left;
+	height: 31px;
+	width: 31px;
+}
+/*styling
+#left_scroll a, #right_scroll a {
+	
+	cursor: pointer;
+	cursor: hand;
+	position: relative;
+	top: 30px;
+}*/
+
+.carousel-control {
+    background: none repeat scroll 0 0 #858BAC;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 100;
+    height: 40px;
+    left: 15px;
+    line-height: 30px;
+    margin-top:40px;
+    position: absolute;
+    text-align: center;
+    width: 40px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.carousel-control.carousel_right {
+    left: auto;
+    right: 280px;
+	margin-left:0 !important;
+	z-index: 99;
+}
+
+.carousel-control.carousel_left {
+    /*left: auto;*/
+    left:0px;
+	margin-right:0 !important;
+	z-index: 99;
+}
+
+.carousel_container {
+	width:680px;
+	position:absolute;
+	
+	}
+	
+	
+.zoom_thumbnails li a:hover:after{
+  content: "";
+  position: absolute;
+  top:-10px; /* <-- change value to better position */
+  left: 50%; /* centers the element's left edge */
+  margin-left: -10px; /* <-- moves it back half it's own width */
+  width: 0px; /* <-- don't need unit on 0 */
+  height 0px; /* <-- don't need unit on 0 */
+xxmargin: 0px auto; /* <-- eliminate, use above margin */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #858BAC; /* <-- change to bottom for up arrow */
+}
+
+.zoom_thumbnails li a.current:after {
+  content: "";
+  position: absolute;
+  top:-10px; /* <-- change value to better position */
+  left: 50%; /* centers the element's left edge */
+  margin-left: -10px; /* <-- moves it back half it's own width */
+  width: 0px; /* <-- don't need unit on 0 */
+  height 0px; /* <-- don't need unit on 0 */
+xxmargin: 0px auto; /* <-- eliminate, use above margin */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #858BAC; /* <-- change to bottom for up arrow */
+}
+
+.toc{
+
+  width: 600px;
+  margin: 0 auto; 
+}
+
+.toc table, th, td {
+    border-collapse: collapse;
+} 
+
+.heading_div_toc h2 {
+    color: white;
+    font-family: "arial";
+    text-align: center;
+}
+
+.heading_div_toc {
+    background-color: #858bac;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    width: 960px;
+	text-align: center;
+}
+
+html body div.toc table tbody tr td a {
+    color: #000;
+    text-decoration: none;
+	font-family: arial;
+    font-size: 14px;
+    line-height: 18px;
+	font-weight:900;
+}
+
+/* selected link 
+.pagination {list-style:none; margin:0px; padding:0px;}
+*/
+.pagination {
+    float: right;
+    list-style: outside none none;
+    margin: 0 475px 0 auto;
+    padding: 0;
+    position: relative;
+}
+.pagination li{float:left; margin:3px;}
+.pagination li a{   display:block; padding:3px 10px; color:#fff; background-color:#858bac; text-decoration:none;}
+.pagination li a.active {border: 1px solid #858bac; color:#000; background-color:#fff;}
+.pagination li a.inactive {background-color:#eee; color:#777; border:1px solid #ccc;}
+
+/* selected link */
+
+
+</style>
+
+<!-- pagination -->
+<link rel="stylesheet" href="css/pagination.css"/>
+
+
+</head>
+
+
+
+<body>
+
+<div class="heading_div_toc"><h2>Table of contents</h2></div>
+<div class="toc"></div>
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+ 
+<script src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script src="js/jPaginate.js"></script>
+<script src="js/toc.js"></script>
+</body>
+</html>

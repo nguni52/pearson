@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>G11_009 Case study: Remote sensing and GIS used in monitoring fires</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../css/tutorial.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<h3>Case study: Remote sensing and GIS used in monitoring fires</h3>
+
+<h4>The Advanced Fire Information System (AFIS)</h4> 
+<p>In the mid-2000s, Eskom realised it could save itself and its clients (i.e. all South Africans) a lot of money and frustration if it could be warned about fires near its transmission and distribution lines.</p>
+
+<p>Veld fires are a major cause of power outages since a big fire under a power line ionises the air, creating an opportunity for a short circuit to earth resulting in a big spark between the powerline and the ground. If that happens then the line goes down instantly to prevent further damage and users at the other end are cut off with no warning.</p>
+
+<p>The Satellite Application Centre at Hartebeesthoek, which is now part of the South African National Space Agency (SANSA) was then part of the Meraka Institute at the CSIR. The project started with Eskom funding scientists there to alert them about fires after one scientist, Philip Frost, proposed the concept to them.</p>
+
+<p>Two types of satellite sensors, MeteoSat Second Generation (MSG) on one geostationary satellite and MODIS on two orbiting satellites, Terra and Aqua, remotely sense (‘take pictures’) of southern Africa on a regular basis.</p>
+
+<p>Because these sensors happen to measure thermal bands (long wavelengths of light), the raster images they produce are processed to find pixels that are ‘hot’. It has been scientifically established that these ‘hot spot’ pixels do indeed represent fires.</p>
+
+<p>The pixels that represent fires are then converted to point vector data and stored in a spatial database.</p>
+
+<p>A GIS has been programmed to automatically test whether a fire is close to an Eskom power line (an example of spatial analysis in a GIS). If it is, then the people in charge of maintaining that section of line are alerted by email and SMS. In almost all cases they can now respond and prevent power outages caused by fires. </p>
+
+<p>Now other organisations such as fire protection associations are also subscribing to the same service because it works so well. </p>
+
+<p>AFIS is improving all the time. If you zoom in closely you will see meteorological wind symbols showing wind speed and direction. These represent live wind data from the South African Weather Service. Since wind has such a big influence on the course of a fire, this information can be used visually to estimate where a fire might be headed. The wind data is also being programmed into more automatic GIS models that will predict where the fire will move and how fast. </p>
+
+<p>AFIS thus demonstrates a real-life application of many of the concepts of GIS.</p>
+
+<section class="eg">
+<p>Once you have read the case study, log on to the following site: <a href="http://southernafrica.afis.co.za/">http://southernafrica.afis.co.za/</a></p>
+
+<p>This site has the full functionality of a GIS. Click on the tool bar to measure, pan, zoom in and zoom out.<p>
+
+<figure>
+	<img src="../images/G11_009/G11_009_R373_GISItfWPg_gis.png" class="img-responsive" width="610" height="" alt=""/>
+</figure>
+
+</section>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+html {
+     overflow: -moz-scrollbars-vertical !important;
+     overflow: scroll !important;
+}
+
+/* CSS Document */
+body {
+	font-family: Arial;
+}
+
+h1 {
+    color: #858bac;
+    font-family: "arial";
+	 font-size: 20px;
+}
+
+h2 {
+    color: #858bac;
+    font-family: "arial";
+	 font-size: 20px;
+}
+
+h3 {
+    color: #858bac;
+    font-family: "arial";
+    font-weight: bold;
+}
+
+h4 {
+    color: #858bac;
+    font-family: "arial";
+}
+
+
+p img {
+border-color: #858bac !important;
+border-style: solid !important;
+border-width: 4px !important;
+}
+
+p span {
+   color: #858bac;
+    font-family: "arial";
+	font-weight: 900;
+}
+
+ul, ol {
+  margin-left: -25px;
+}
+
+li {
+  line-height: 125%;
+  margin-bottom: 0.5em;
+}
+
+.ind_text {
+  margin-left: 1em;
+}
+
+figure img {
+border-color: #858bac !important;
+border-style: solid !important;
+border-width: 4px !important;
+margin-top: 20px !important;
+}
+
+figure {
+  margin-left: 0;
+  margin-bottom: 2em;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.side_by_side {
+  float: left;
+  margin-right: 10px;
+}
+
+section.eg figure img {
+      border: solid 1px black !important;
+}
+
+.img_p_640 {
+    margin-left: 40px;
+    width: 640px;
+}
+
+.img_p_640_table {
+    margin-left: 70px;
+    width: 640px;
+}
+
+
+/*span colours*/
+span.blue {
+  color: #00A0FF;
+  font-weight: normal;
+}
+
+span.green {
+  color: #00A041;
+  font-weight: normal;
+}
+
+span.maroon {
+  color: #7c0000;
+  font-weight: normal;
+}
+
+
+span.orange {
+  color: #FF8700;
+  font-weight: normal;
+}
+
+span.purple {
+  color: #6400FF;
+  font-weight: normal;
+}
+
+span.red {
+  color: #FF0000;
+  font-weight: normal;
+}
+
+span.brown {
+  color: #73522a;
+  font-weight: normal;
+}
+
+span.grey {
+  color: #7c7c7c;
+  font-weight: normal;
+}
+
+/*icon*/
+.icondropcap {
+  border: none;
+  float: left;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/*Example*/
+.eg {
+  border: solid #858bac 2px;
+  padding: 10px;
+  width: 620px;
+}
+
+.step {
+  margin-left: 60px;
+  text-indent: -60px;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #CED1DE;
+}
+
+.MathJax span {
+    border: 0 none;
+    color: black;
+    display: inline;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    position: static;
+    text-decoration: none;
+    vertical-align: 0;
+}
+
+p span {
+    color: black;
+    font-family: Times, serif;
+    font-weight: normal;
+}
+
+img {
+border-color: #858bac !important;
+border-style: solid !important;
+border-width: 4px !important;
+}
+
+p img.img-responsive.icondropcap {
+
+    border-width: 0 !important;
+}
+
+

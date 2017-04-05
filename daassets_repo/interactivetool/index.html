@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Interactive activity asset</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<!-- calculator -->
+<link href="css/calculator.css" rel="stylesheet">
+
+<!-- custom styles -->
+<link href="css/styles.css" rel="stylesheet">
+<!-- css for jQuizMe -->
+<link rel="stylesheet" type="text/css" href="css/jQuizMe.css?v=1.0"/>
+
+<!-- progress bar -->
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+
+<!-- Rotatable -->
+<link rel="stylesheet" href="css/jquery.ui.rotatable.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jquery.qtip -->
+
+<link type="text/css" rel="stylesheet" href="css/jquery.qtip.min.css" />
+</head>
+<body>
+<!-- Main container starts here -->
+<div class="container">
+  <div class="row"><!--Content row -->
+    <div id="tut_content" class="col-md-12"><!-- Tut Content col --> 
+      <!-- Tut heading div -->
+      <div class="heading_div_tut"> </div>
+      <!-- Tut heading div --> 
+      <!-- Iframe --> 
+      <!-- Might have to change iframe height from 500px -->
+      <div class="content_div_tut"> </div>
+      <!-- Iframe --> 
+    </div>
+    <!-- Tut Content col -->
+    <div id="content" style="display:none" class="col-md-12"><!-- Practical Content col --> 
+      <!-- Tut heading div -->
+      <div class="heading_div_app"> </div>
+      <!-- Tut heading div --> 
+      <!-- Iframe --> 
+      <!-- Might have to change iframe height from 500px --> 
+      
+      <!-- navigation styled --> 
+      <div class="row">
+        <div class="col-md-12 bottom-margin">
+          <ul class="tools-navigation">
+          
+            <li><a href="#" id="undo" data-toggle="tooltip" data-placement="bottom" title="Click to undo"><i aria-hidden="true" class="icon-undo"></i>Undo</a></li>
+            <li><a href="#" id="redo" data-toggle="tooltip" data-placement="bottom" title="Click to redo"><i aria-hidden="true" class="icon-redo"></i>Redo</a></li>
+            <li><a href="#"id="clear" data-toggle="tooltip" data-placement="bottom" title="Click to redo"><i aria-hidden="true" class="icon-clear"></i>Clear</a></li>
+            <li><a href="#" id="path" class="tool" data-toggle="tooltip" data-placement="bottom" title="Click to make straight lines, click/hold to make curves"><i aria-hidden="true" class="icon-line"></i>Line</a></li>
+            <li><a href="#" id="brush" class="tool" data-toggle="tooltip" data-placement="bottom" title="Drag to draw with pencil"><i aria-hidden="true" class="glyphicon glyphicon-pencil"></i>Pencil</a></li>
+            <li><a href="#" id="zoom" class="tool" data-toggle="tooltip" data-placement="bottom" title="Click to bring zoom tools up" onmousedown="writeObject()" onClick="return false"><i aria-hidden="true" class="glyphicon glyphicon-zoom-in"></i>Zoom</a></li>
+            <li><a href="#" id="strokeButton" data-toggle="tooltip" data-placement="bottom" title="Click to adjust"><i aria-hidden="true" class="glyphicon glyphicon-edit"></i>Stroke</a>
+              <div id="stroke-container">
+                <div aria-disabled="false" id="slider" class="ui-slider light ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                  <div style="left: 49.4949%;" id="handle" class="ui-slider-handle ui-state-default ui-corner-all"></div>
+                </div>
+                <div id="box">
+                  <div style="margin-top: 17.5px; background-color: rgb(51, 102, 221); width: 25px; height: 25px;" id="stroke"></div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#" id="colorButton" data-toggle="tooltip" data-placement="bottom" title="Click to choose"><i aria-hidden="true" class="glyphicon glyphicon-adjust"></i>Colour</a></li>
+            <li class='practical_tools'><a rel='protractor' href='#' data-toggle="tooltip" data-placement="bottom" title="Click to use protractor"><i aria-hidden="true" class="icon-protrator"></i>Protractor</a>
+              <div id="colors">
+                <div style="background-color: rgb(238, 85, 85);" class="color red light"></div>
+                <div style="background-color: rgb(204, 51, 51);" class="color red medium"></div>
+                <div style="background-color: rgb(170, 17, 17);" class="color red dark"></div>
+                <div style="background-color: rgb(136, 255, 68);" class="color green light"></div>
+                <div style="background-color: rgb(102, 221, 34);" class="color green medium"></div>
+                <div style="background-color: rgb(68, 187, 17);" class="color green dark"></div>
+                <div style="background-color: rgb(85, 136, 255);" class="color blue light"></div>
+                <div style="background-color: rgb(51, 102, 221);" class="color blue medium chosen"></div>
+                <div style="background-color: rgb(17, 68, 187);" class="color blue dark"></div>
+                <div style="background-color: rgb(255, 153, 85);" class="color orange light"></div>
+                <div style="background-color: rgb(255, 119, 51);" class="color orange medium"></div>
+                <div style="background-color: rgb(221, 85, 17);" class="color orange dark"></div>
+                <div style="background-color: rgb(255, 255, 85);" class="color yellow light"></div>
+                <div style="background-color: rgb(255, 238, 51);" class="color yellow medium"></div>
+                <div style="background-color: rgb(238, 221, 34);" class="color yellow dark"></div>
+                <div style="background-color: rgb(187, 136, 255);" class="color purple light"></div>
+                <div style="background-color: rgb(153, 102, 255);" class="color purple medium"></div>
+                <div style="background-color: rgb(119, 85, 221);" class="color purple dark"></div>
+                <div style="background-color: rgb(204, 204, 204);" class="color black light"></div>
+                <div style="background-color: rgb(102, 102, 102);" class="color black medium"></div>
+                <div style="background-color: rgb(0, 0, 0);" class="color black dark"></div>
+              </div>
+            </li>
+            <li class='practical_tools'><a rel='ruler' href='#' data-toggle="tooltip" data-placement="bottom" title="Click to use ruler"><i aria-hidden="true" class="icon-ruler"></i>Ruler</a></li>
+             <li class='practical_tools'><a href="#" rel='calculator' data-toggle="tooltip" data-placement="bottom" title="Click to use calculator"><i aria-hidden="true" class="icon-calculator"></i>Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- navigation styled -->
+<!-- navigation alert boxes -->  
+<div id="protractorAlertbox" class="alert alert-warning alert-dismissible div-display" role="alert" style="display:none">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Heads up!</strong> To move the protractor, click the protractor and move your mouse to any point.<br>To rotate the protractor, click or if you're using a tablet tap on the left  or right buttons on the left or right of the protractor to rotate by 1 degree.
+</div>
+
+<div id="rulerAlertbox" class="alert alert-warning alert-dismissible div-display" role="alert" style="display:none">
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Heads up!</strong> To move the ruler, click the ruler and move your mouse to any point.<br>To rotate the ruler, click or if you're using a tablet tap on the left or right button on the left or right of the protractor to rotate by 1 degree.
+</div>
+
+<div id="calculatorAlertbox" class="alert alert-warning alert-dismissible div-display" role="alert" style="display:none">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Heads up!</strong> To move the calculator, click the calculator and move your mouse to any point.
+</div>
+<!-- navigation alert boxes -->      
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">help ?</h4>
+      </div>
+      <div class="modal-body">
+        ...
+        <div class="Instruction_modal"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+      <!-- tool icons end here -->
+      <div class="row"><!-- Media area - images and questions section -->
+        <div class="col-md-8 col-sm-12">
+ 
+          <canvas width="638" height="421" id="canvas"></canvas>
+          <div id="zoom_container"> </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner"> </div>
+                <a class="left carousel-control" href="#myCarousel" title="Click to show next images" data-slide="prev"><span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next" title="Click to show previous images"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a> </div>
+              
+              <!-- thumbs --> 
+              <!--/well--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="row">
+            <div class="col-md-12" id="questions">
+              <div id="progressbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      	
+      <!-- Media area - images and questions section --> 
+      
+    </div>
+    <!-- Practical Content col --> 
+  </div>
+  <!-- Content row -->
+  
+  <div class="row"><!-- Footer row -->
+    <div class="col-md-12"><!-- Footer col -->
+      <div class="footer_div"><!-- Footer starts here -->
+        <ul class="pagination pull-right">
+          <!-- Pagination starts here -->
+          <li class="previous"><a href="#" title="Click to go to previous page"><span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span> Previous</a></li>
+          <li class="tutorial_page active"><a href="#" title="Click to go to page 1">1</a></li>
+          <li class="tool_page"><a href="#" title="Click to go to page 2">2</a></li>
+          <li class="next"><a href="#" title="Click to go to next page">Next <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
+        <!-- Pagination ends here --> 
+      </div>
+      <!-- Footer ends here --> 
+    </div>
+    <!-- Footer row --> 
+  </div>
+  <!-- Footer col --> 
+  
+  <!--real life tools-->
+  
+  <div id="protractor" class="row protractor div-display" style="display: none">
+    <div class="col-sm-1">
+      <button class="btn btn-custom ProtractorHandle" id="fromToProtractor"><i class="icon-undo" aria-hidden="true"></i></button>
+    </div>
+    <div class="col-sm-10"><img  class="img-responsive" id="protractorTool" src="img/protractor-223-md.png"></div>
+    <div class="col-sm-1">
+      <button class="btn btn-custom ProtractorHandle" id="relativePtotractor"><i class="icon-redo" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div id="ruler" class="row ruler div-display" style="display: none">
+    <div class="col-sm-1">
+      <button class="btn btn-custom RulerHandle" id="fromTo"><i class="icon-undo" aria-hidden="true"></i></button>
+    </div>
+    <div class="col-sm-10"><img class="img-responsive" id="rulerTool" src="img/ruler_T.png"></div>
+    <div class="col-sm-1">
+      <button class="btn btn-custom RulerHandle" id="relative"><i class="icon-redo" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  
+  
+  <!-- Calculator html -->
+  <div id="calculator" class="row calculator div-display" style="display: none">
+  <div class="col-sm-12">
+   
+      <!-- Screen and clear key -->
+      <div class="top"> <span class="clear">C</span>
+        <div class="screen"></div>
+      </div>
+      <div class="keys"> 
+        <!-- operators and other keys --> 
+        <span>7</span> <span>8</span> <span>9</span> <span class="operator">+</span> <span>4</span> <span>5</span> <span>6</span> <span class="operator">-</span> <span>1</span> <span>2</span> <span>3</span> <span class="operator">÷</span> <span>0</span> <span>.</span> <span class="eval">=</span> <span class="operator">x</span> </div>
+   
+    </div>
+    </div>
+    <!-- Calculator html --> 
+    
+  <!--real life tools--> 
+</div>
+<!-- Main container ends here --> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.min.js"></script> 
+
+
+<!-- detect mobile browser --> 
+<script src="js/detectmobilebrowser.js"></script>
+
+<!-- jCanvas --> 
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui-touch-punch.js"></script>
+<script>
+/*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+$.widget.bridge('uibutton', $.ui.button);
+$.widget.bridge('uitooltip', $.ui.tooltip);
+</script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jcanvas.js"></script>
+<script src="js/brush.js"></script>
+<script src="js/path.js"></script>
+<script src="js/rect.js"></script>
+<script src="js/ellipse.js"></script>
+<script src="js/eraser.js"></script>
+<script src="js/global.js"></script>
+<!-- jCanvas --> 
+
+<script src="js/TweenLite.min.js"></script> 
+<script src="js/Draggable.min.js"></script> 
+<script src="js/CSSPlugin.min.js"></script> 
+<!-- progress bar --> 
+
+<script src="js/TweenMax.min.js"></script> 
+
+<!-- Jquiz me --> 
+<script type="text/javascript" src="js/jQuizMe-2.2.1.js?v=1.9.48"></script>
+
+<!-- Zoomify --> 
+<script src="js/jquery.smoothZoom.js"></script> 
+<!-- Custom --> 
+<script src="js/custom_script.js?v=1.9.45"></script>
+
+<!-- Include either the minifed or production version, NOT both!! --> 
+
+
+<!-- jQuery for rotating --> 
+<script src="js/jquery.ui.rotatable.min.js"></script>
+
+<!-- Calculator -->
+<!-- PrefixFree -->
+<script src="js/prefixfree-1.0.7.js" type="text/javascript"></script>
+<!-- PrefixFree -->
+<!-- Calculator -->
+<!-- Include either the minifed or production version, NOT both!! -->
+<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
